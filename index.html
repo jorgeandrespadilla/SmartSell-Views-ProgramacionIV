@@ -5,38 +5,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>SmartSell</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- CSS only -->
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         .custom-bg {
             background: #0f2027;
             background: -webkit-linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
             background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
         }
+
+        .custom-border {
+            border-top: 4px solid #dd3333d3;
+        }
+
+        .signup-link {
+            border-radius: 0.2rem;
+            box-shadow: inset 0 0 0 1px #586069;
+            transition: all 300ms;
+        }
+
+        .signup-link:hover {
+            box-shadow: inset 0 0 0 3px #fff;
+        }
+
+        .start-link {
+            border-radius: 1rem;
+            transition: all 300ms;
+        }
+
+        .start-link:hover .shopping-icon {
+            animation: swing 0.8s cubic-bezier(.36, .07, .19, .97) both;
+        }
+
+        .main-img {
+            width: 100%;
+        }
+
+        .light-muted-text {
+            color: rgb(194, 193, 193);
+        }
         .main-title {
-            font-size: 4rem;
+            font-size: 2rem;
+        }
+        .main-description {
+            font-size: 1rem;
+        }
+        @media (min-width: 576px) {
+            .main-title {
+                font-size: 3rem;
+            }
+            .main-description {
+                font-size: 1.25rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .main-title {
+                font-size: 4rem;
+            }
+        }
+
+        @keyframes swing {
+            20% {
+                transform: rotate(15deg);
+            }
+
+            40% {
+                transform: rotate(-10deg);
+            }
+
+            60% {
+                transform: rotate(5deg);
+            }
+
+            80% {
+                transform: rotate(-5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
         }
     </style>
 </head>
 
-<body>
+<body class="min-vh-100 custom-bg">
     <!-- CONTENT HERE -->
-    <div class="min-vh-100 p-5 custom-bg">
+    <nav class="navbar navbar-expand-lg navbar-dark custom-border">
+        <div class="container-fluid py-2 px-3 px-md-5">
+            <span class="d-flex align-items-center">
+                <img width="36px" src="logo.png" />
+                <a class="navbar-brand text-light ms-3 fw-bold" href="#">SmartSell</a>
+            </span>
+            <a class="text-decoration-none text-light py-2 px-3 signup-link" href="#">Iniciar sesión</a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href=""></a></li>
+                </ul>
+            </div> -->
+        </div>
+    </nav>
+    <div class="p-5 min-h-100">
         <div class="container">
             <div class="row">
-                <div class="col-8">
-                  <h1 class="main-title text-light">Smart Sell</h1>
-                  <p class="text-light fs-4">Sistema de subastas</p>
-                  <p></p>
+                <!-- <div class="col-0"></div> -->
+                <div class="col-md-7 d-flex flex-column justify-content-center pe-md-5 pb-4 pb-md-0">
+                    <h1 class="main-title text-light text-center text-md-start pt-md-3">Compra y vende tus productos en
+                        línea
+                    </h1>
+                    <p class="light-muted-text main-description text-center text-md-start mt-3">Con SmartSell, encuentra las mejores
+                        ofertas de productos gracias a nuestro innovador sistema de subastas.</p>
+                    <div class="row">
+                        <div class="d-none d-sm-block col-sm-3 d-md-none"></div>
+                        <div class="col-12 col-sm-6 mt-3 ms-md-2 bg-light start-link">
+                            <a class="text-decoration-none text-dark d-flex justify-content-center align-items-center py-2 px-3"
+                                href="#">
+                                <span class="material-icons shopping-icon">shopping_bag</span>
+                                <span class="ps-2 fs-5 fw-bold">Empezar</span>
+                            </a>
+                        </div>
+                        <div class="d-none d-sm-block col-sm-3 col-md-6"></div>
+                    </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-5 mt-4 mt-md-0 d-flex flex-column justify-content-center">
+                    <img class="main-img" src="business.svg" />
                 </div>
-              </div>
             </div>
         </div>
     </div>
-        <!-- JavaScript Bundle with Popper -->
+    </div>
+    <!-- JavaScript Bundle with Popper -->
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
